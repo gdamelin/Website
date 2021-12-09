@@ -1,4 +1,23 @@
-body
+html
 {
-  background-color: red;
+  background-image: url("https://hips.hearstapps.com/sev.h-cdn.co/assets/16/33/980x779/gallery-1471536244-tswift-myspace.jpg?resize=480:*");
+}
+
+.mainsection
+{
+  background-color: blue;
+  position: fixed;
+  margin: 100px;
+}
+
+.lyricsbox
+{
+  margin: 20px;
+  padding: 10px;
+  background-color: pink;
+}
+
+.maintextdiv
+{
+    margin: 20px;
 }
