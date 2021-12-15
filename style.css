@@ -33,11 +33,12 @@ body
   height: 200px;
   display:inline-block;
   cursor: pointer;
+  filter: brightness(60%);
 }
 
 .panel:hover
 {
-  filter: brightness(80%);
+  filter: brightness(50%);
 }
 
 .top-left
@@ -66,5 +67,5 @@ body
 
 .active
 {
-  background-color: white;
+  filter: brightness(100%);
 }
