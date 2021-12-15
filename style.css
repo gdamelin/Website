@@ -6,8 +6,8 @@ html
 .mainsection
 {
   background-color: blue;
-  position: fixed;
   margin: 100px;
+  padding: 10px;
 }
 
 .lyricsbox
