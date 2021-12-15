@@ -24,28 +24,36 @@ html
 
 .panel
 {
+  width: 200px;
+  height: 200px;
+  display:inline-block;
+}
+
+.top-left
+{
   background-color: red;
+  border-top-left-radius: 200px;
+}
+
+.top-right
+{
+  background-color: blue;
+  border-top-right-radius: 200px;
+}
+
+.bottom-left
+{
+  background-color: green;
   border-bottom-left-radius: 200px;
-  width: 100px;
-  height: 100px;
 }
 
-.red
+.bottom-right
 {
-
+  background-color: yellow;
+  border-bottom-right-radius: 200px;
 }
 
-.blue
+.panelrow
 {
 
-}
-
-.green
-{
-
-}
-
-.yellow
-{
-  
 }
