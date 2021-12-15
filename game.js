@@ -1,4 +1,4 @@
-/**
+/*
 var topLeft = document.getElementById("topLeft");
 var topRight = document.getElementById("topRight");
 var bottomLeft = document.getElementById("bottomLeft");
