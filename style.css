@@ -33,12 +33,13 @@ body
   height: 200px;
   display:inline-block;
   cursor: pointer;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 .panel:hover
 {
-  filter: brightness(50%);
+  border-style: solid;
+  border-color: cyan;
 }
 
 .top-left
