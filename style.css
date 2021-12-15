@@ -21,3 +21,31 @@ html
 {
     margin: 20px;
 }
+
+.panel
+{
+  background-color: red;
+  border-bottom-left-radius: 200px;
+  width: 100px;
+  height: 100px;
+}
+
+.red
+{
+
+}
+
+.blue
+{
+
+}
+
+.green
+{
+
+}
+
+.yellow
+{
+  
+}
