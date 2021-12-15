@@ -95,15 +95,12 @@ function removeFlash (panel)
 function flash (panel)
 {
   addFlash(panel);
-  //have to somehow pause
-  removeFlash(panel);
+  setTimeout(() => {removeFlash(panel)}, 2000);
 }
-
-console.log(sequence);
 
 for (let i = 0; i < sequence.length; i++)
 {
-  flash(sequence[i]);
+  setTimeout(() => {flash(sequence[i])}, 2000);
 }
 </script>
 </body>
