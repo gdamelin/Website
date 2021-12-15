@@ -3,6 +3,11 @@ html
   background-image: url("https://hips.hearstapps.com/sev.h-cdn.co/assets/16/33/980x779/gallery-1471536244-tswift-myspace.jpg?resize=480:*");
 }
 
+body
+{
+  text-align: center;
+}
+
 .mainsection
 {
   background-color: blue;
@@ -27,33 +32,39 @@ html
   width: 200px;
   height: 200px;
   display:inline-block;
+  cursor: pointer;
+}
+
+.panel:hover
+{
+  filter: brightness(80%);
 }
 
 .top-left
 {
   background-color: red;
-  border-top-left-radius: 200px;
+  border-top-left-radius: 100%;
 }
 
 .top-right
 {
   background-color: blue;
-  border-top-right-radius: 200px;
+  border-top-right-radius: 100%;
 }
 
 .bottom-left
 {
   background-color: green;
-  border-bottom-left-radius: 200px;
+  border-bottom-left-radius: 100%;
 }
 
 .bottom-right
 {
   background-color: yellow;
-  border-bottom-right-radius: 200px;
+  border-bottom-right-radius: 100%;
 }
 
-.panelrow
+.active
 {
-
+  background-color: white;
 }
