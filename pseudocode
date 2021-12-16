@@ -1,0 +1,9 @@
+have empty array for seqencue answers
+if it's empty add one
+add answer to array
+blink, collect user answer, do stuff
+if correct
+   - add another answer to array
+   - blick, collect user answers, do stuff
+keep doing that using WRONG
+output array size!
