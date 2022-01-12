@@ -12,12 +12,12 @@ let Game={
   sequencing:{
     sequence:[],
     makeSequence:function(num){
-      for (let i=0;i<num;i++){
+      for(let i=0;i<num;i++){
         this.sequence.push(this.getRandomPanel());
       }
     },
     getRandomPanel:function(){
-      let panels=["topLeft","topRight","bottomLeft","bottomRight"];
+      let panels=["topLeft","topRight","bottomLeft",g"bottomRight"];
       let panel=panels[parseInt(Math.random()*panels.length)];
       console.log(panel);
       return(panel);
@@ -32,16 +32,16 @@ let Game={
       this.getPanel(panel).classList.add("active");
     },
     getPanel:function(panel){
-      if (panel=="topLeft"){
+      if(panel=="topLeft"){
         return(Game.button.topLeft);
       }
       if(panel=="topRight"){
         return(topRight);
       }
-      if (panel=="bottomLeft"){
+      if(panel=="bottomLeft"){
         return(bottomLeft);
       }
-      if (panel=="bottomRight"){
+      if(panel=="bottomRight"){
         return(bottomRight);
       }
     },
@@ -49,7 +49,7 @@ let Game={
       this.getPanel(panel).classList.remove("active");
     },
     doFlashes:function(){
-      for (let i=0;i<Game.sequencing.sequence.length;i++){
+      for(let i=0;i<Game.sequencing.sequence.length;i++){
         setTimeout(()=>{this.flash(Game.sequencing.sequence[i])},2000*i);
         setTimeout(()=>{},1000);
       }
@@ -62,11 +62,11 @@ let Game={
     ready:false,
     failed:false,
     startGame:function(){
-      if (this.failed!=true){
+      if(this.failed!=true){
         Game.sequencing.makeSequence(4);
         Game.flashing.doFlashes();
         this.ready=true;
-        if (this.ready==true){
+        if(this.ready==true){
           Game.button.topLeft.addEventListener("click",Game.answers.addTopLeft);
           Game.button.topRight.addEventListener("click",Game.answers.addTopRight);
           Game.button.bottomLeft.addEventListener("click",Game.answers.addBottomLeft);
@@ -75,7 +75,7 @@ let Game={
       }
     },
     checkAnswer:function(){
-        if (arraysEqual(this.playerSequence,this.sequence)){
+        if(arraysEqual(this.playerSequence,this.sequence)){
           alert("Sequence Correct!");
           this.level=this.level+1;
         }
@@ -91,11 +91,11 @@ let Game={
     },
     arraysEqual:function(playerSequence,sequence){
       for(let i=0;i<sequence.length;i++){
-        if (playerSequence[i]!=sequence[i]){
-          return (false);
+        if(playerSequence[i]!=sequence[i]){
+          return(false);
         }
       }
-      return (true);
+      return(true);
     }
   },
   answers:{
