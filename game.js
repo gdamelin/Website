@@ -123,30 +123,39 @@ let Game={
 }
 let Canvas={
   ctx:document.getElementById("canvas").getContext("2d"),
-  draw:function(){
+  drawArt:function(){
     this.ctx.clearRect(0,0,900,500);
+    //Circle
     this.ctx.beginPath();
-    this.ctx.arc(350,350,50,0,2*Math.PI);
+    this.ctx.arc(350,350,50,0,2*Math.PI,false);
     this.ctx.stroke();
+    //Rectangle
     this.ctx.save();
-    let time = new Date();
-    this.ctx.rotate(time.getSeconds() + time.getMiliseconds / 1000);
+    let time=new Date();
+    this.ctx.translate(10*time.getSeconds(),0);
     this.ctx.beginPath();
     this.ctx.rect(350,250,150,100);
     this.ctx.stroke();
     this.ctx.restore();
-    this.ctx.closePath();
-    this.ctx.beginPath();
-    this.ctx.arc(500,250,70,0,2*Math.PI);
-    this.ctx.stroke();
-    this.ctx.closePath();
+    //Triangle
     this.ctx.beginPath();
     this.ctx.moveTo(490,220);
     this.ctx.lineTo(630,220);
     this.ctx.lineTo(560,220-120*Math.cos(Math.PI/6));
     this.ctx.lineTo(490,220);
     this.ctx.stroke();
+    //Circle
+    this.ctx.save();
+    let time2=new Date();
+    this.ctx.rotate(time2.getSeconds()/20);
+    this.ctx.beginPath();
+    this.ctx.arc(500,250,70,0,2*Math.PI);
+    this.ctx.stroke();
     this.ctx.restore();
+  },
+  draw:function(){
+    Canvas.drawArt();
+    window.requestAnimationFrame(Canvas.draw);
   }
 }
 Canvas.draw();
