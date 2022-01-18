@@ -128,10 +128,14 @@ let Canvas={
     this.ctx.beginPath();
     this.ctx.arc(350,350,50,0,2*Math.PI);
     this.ctx.stroke();
-    this.ctx.closePath();
+    this.ctx.save();
+    let time = new Date();
+    this.ctx.rotate(time.getSeconds() + time.getMiliseconds / 1000);
     this.ctx.beginPath();
     this.ctx.rect(350,250,150,100);
     this.ctx.stroke();
+    this.ctx.restore();
+    this.ctx.closePath();
     this.ctx.beginPath();
     this.ctx.arc(500,250,70,0,2*Math.PI);
     this.ctx.stroke();
@@ -142,7 +146,7 @@ let Canvas={
     this.ctx.lineTo(560,220-120*Math.cos(Math.PI/6));
     this.ctx.lineTo(490,220);
     this.ctx.stroke();
-    this.ctx.closePath();
+    this.ctx.restore();
   }
 }
 Canvas.draw();
