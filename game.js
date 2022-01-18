@@ -17,7 +17,7 @@ let Game={
       }
     },
     getRandomPanel:function(){
-      let panels=["topLeft","topRight","bottomLeft",g"bottomRight"];
+      let panels=["topLeft","topRight","bottomLeft","bottomRight"];
       let panel=panels[parseInt(Math.random()*panels.length)];
       console.log(panel);
       return(panel);
@@ -121,4 +121,27 @@ let Game={
     }
   }
 }
+let Canvas={
+  ctx:document.getElementById("canvas").getContext("2d"),
+  draw:function(){
+    Canvas.ctx.clearRect(0,0,900,500);
+    Canvas.ctx.beginPath();
+    Canvas.ctx.arc(350,350,50,0,2*Math.PI);
+    Canvas.ctx.stroke();
+    Canvas.ctx.beginPath();
+    Canvas.ctx.rect(350,250,150,100);
+    Canvas.ctx.stroke();
+    Canvas.ctx.beginPath();
+    Canvas.ctx.arc(500,250,70,0,2*Math.PI);
+    Canvas.ctx.stroke();
+    Canvas.ctx.closePath();
+    Canvas.ctx.beginPath();
+    Canvas.ctx.moveTo(490,220);
+    Canvas.ctx.lineTo(630,220);
+    Canvas.ctx.lineTo(560,220-120*Math.cos(Math.PI/6));
+    Canvas.ctx.lineTo(490,220);
+    Canvas.ctx.stroke();
+  }
+}
+Canvas.draw();
 Game.button.start.addEventListener("click",Game.playing.startGame);
